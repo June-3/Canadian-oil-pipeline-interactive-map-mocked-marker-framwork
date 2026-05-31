@@ -8,7 +8,7 @@ public class Asset
     public double Longitude { get; set; }
     public double Latitude { get; set; }
     public string Status { get; set; } = "normal"; // normal / warning / alarm
-    public DateTime UpdatedAt { get; set; }
+    public DateTimeOffset UpdatedAt { get; set; }
 
     public List<Reading> Readings { get; set; } = [];
 }

@@ -5,13 +5,19 @@ Set DATABASE_URL to switch between SQLite (dev) and SQL Server (prod).
 
 import os
 
-# Database — defaults to SQLite for local dev; swap for SQL Server in production.
-# SQL Server example:
-#   DATABASE_URL = "mssql+pyodbc://user:pass@host:1433/PipelineDB?driver=ODBC+Driver+17+for+SQL+Server"
-DATABASE_URL = os.getenv(
-    "PIPELINE_DB_URL",
-    "sqlite:///pipeline_monitor.db",
+# Database — SQL Server (LocalDB) for development.
+# SQLite fallback: set PIPELINE_DB_URL=sqlite:///pipeline_monitor.db
+_LOCALDB_CONN = (
+    "DRIVER=ODBC Driver 17 for SQL Server;"
+    "SERVER=(localdb)\\MSSQLLocalDB;"
+    "DATABASE=PipelineDB;"
+    "Trusted_Connection=yes;"
 )
+# URL-encode for SQLAlchemy's pyodbc dialect
+import urllib.parse
+_LOCALDB_URL = "mssql+pyodbc:///?odbc_connect=" + urllib.parse.quote_plus(_LOCALDB_CONN)
+
+DATABASE_URL = os.getenv("PIPELINE_DB_URL", _LOCALDB_URL)
 
 # Path to the GeoJSON file (relative to project root)
 GEOJSON_PATH = os.path.join(

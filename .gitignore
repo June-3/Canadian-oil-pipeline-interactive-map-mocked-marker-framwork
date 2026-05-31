@@ -333,6 +333,16 @@ paket-files/
 __pycache__/
 *.pyc
 
+# Python virtual environment
+venv/
+
+# Dagster temporary directories & home
+tmp*/
+dagster_home/
+
+# SQLite (legacy dev database)
+*.db
+
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config
