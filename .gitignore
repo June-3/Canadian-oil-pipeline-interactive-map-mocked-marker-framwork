@@ -496,3 +496,6 @@ $RECYCLE.BIN/
 
 #env
 venv/
+
+#requirements for claude AI reading
+requirement.md

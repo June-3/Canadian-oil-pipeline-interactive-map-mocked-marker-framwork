@@ -86,10 +86,8 @@ The project demonstrates a complete **data pipeline → REST API → map fronten
 │   └── index.css
 ├── public/
 │   └── Pipelines.geojson         # Pipeline route data (static)
-├── Pipelines.geojson             # Source GeoJSON (2 MB)
 ├── package.json                  # Node dependencies
-├── vite.config.js                # Vite config + API proxy
-└── requirement.md                # Project requirements
+└── vite.config.js                # Vite config + API proxy
 ```
 
 ---
