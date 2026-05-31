@@ -1,0 +1,6 @@
+dagster==1.7.15
+dagster-webserver==1.7.15
+sqlalchemy==2.0.35
+geoalchemy2==0.15.2
+shapely==2.0.5
+numpy==1.26.4

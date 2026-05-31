@@ -1,0 +1,25 @@
+# Node
+node_modules/
+dist/
+
+# Python virtual environment
+venv/
+
+# Python bytecode cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dagster
+dagster_home/
+
+# SQLite database (local dev)
+*.db
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
