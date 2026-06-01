@@ -16,6 +16,11 @@ The project demonstrates a complete **data pipeline → REST API → map fronten
 - **RESTful API** — ASP.NET Core provides `GET /api/assets`, `/api/assets/{id}/readings`, and `/api/assets/{id}/history` endpoints backed by Entity Framework Core.
 
 ---
+## Example
+![MapView](asset/MapView.gif)
+![AssetView](asset/AssetView.png)
+
+---
 
 ## Architecture
 
@@ -260,3 +265,11 @@ Example response (`/api/assets`):
 | `PIPELINE_DB_URL` | LocalDB auto | SQLAlchemy connection string |
 | `SIMULATION_INTERVAL` | `60` | Seconds between ETL ticks |
 | `DAGSTER_HOME` | *(auto tmp)* | Persistent Dagster storage |
+
+---
+## Reference
+Pipelines.geojson data comes from Governement of Canada. 
+https://open.canada.ca/data/en/dataset/4188dacc-07c5-f72c-cfb1-cd505fcd4eb4
+
+![Goverment CA Web Preview](asset/Goverment%20of%20Canada.png)
+![MapPreview](asset/MapPreview1.png)
